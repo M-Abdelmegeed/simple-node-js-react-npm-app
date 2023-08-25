@@ -22,11 +22,8 @@ pipeline {
                 
                 // Capture the server URL from logs or other sources
                 def serverUrl = 'http://localhost:4402' // Replace with actual URL
-                
-                // Store the server URL as an artifact
-                archiveArtifacts artifacts: '**/server.pid', allowEmptyArchive: true
                 echo "Server URL: ${serverUrl}"
-                }
+            }
         }
     }
 }
