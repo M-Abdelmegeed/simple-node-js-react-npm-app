@@ -19,9 +19,7 @@ pipeline {
                 sh './jenkins/scripts/deliver.sh'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
                 sh './jenkins/scripts/kill.sh'
-                
-                // Capture the server URL from logs or other sources
-                def serverUrl = 'http://localhost:4402' // Replace with actual URL
+                def serverUrl = 'http://localhost:4402'
                 echo "Server URL: ${serverUrl}"
             }
         }
